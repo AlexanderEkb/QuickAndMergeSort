@@ -13,11 +13,11 @@ namespace Exercize
           Stopwatch sw = new Stopwatch();
           int[] Array = PrepareArray(ItemCount);
           sw.Start();
-          QuickSortOne QuickSorterOne = new QuickSortOne();
-          // QuickSortTwo QuickSorterTwo = new QuickSortTwo();
+          // QuickSortOne QuickSorterOne = new QuickSortOne();
+          QuickSortTwo QuickSorterTwo = new QuickSortTwo();
           // MergeSort MergeSorter = new MergeSort();
-          QuickSorterOne.Sort(Array);
-          // QuickSorterTwo.Sort(Array);
+          // QuickSorterOne.Sort(Array);
+          QuickSorterTwo.Sort(Array);
           // QuickSorterOne.Sort(Array);
           sw.Stop();
           if(IsSorted(Array))

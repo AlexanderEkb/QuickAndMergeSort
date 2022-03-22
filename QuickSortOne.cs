@@ -7,19 +7,12 @@ namespace Exercize
     {
       _Array = Array;
       DoWork(0, _Array.Length-1);
-      // for(int i=0; i < _Array.Length; i++)
-      // {
-      //   Console.Write($"{_Array[i]} ");
-      // }
-      // Console.WriteLine("");
       Array = _Array;
     }
 
     void DoWork(int a, int b)
     {
-      // Console.Write($"{a}:{b}->");
       int M = Split(a, b);
-      // Console.WriteLine($"{M}");
       if(M>a)
       {
         DoWork(a, M-1);
@@ -37,30 +30,19 @@ namespace Exercize
 
       while(L<R)
       {
-        // Console.Write($"{L}-{R}");
-
         if(_Array[L] <= Pivot)
         {
-          if(L<b)
-          {
-            L++;
-            // Console.WriteLine(@"L");
-          }
+          if(L<b) L++;
         }
         else if(_Array[R] > Pivot)
         {
-          if(R>a)
-          {
-            R--;
-            // Console.WriteLine(@"R");
-          }
+          if(R>a) R--;
         }
-        else{
+        else
+        {
           Swap(L, R);
-          // Console.WriteLine(@"S");
         }
       }
-      // Console.WriteLine(@"---");
 
       return L;
     }
