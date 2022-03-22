@@ -19,7 +19,7 @@ namespace Exercize
       }
       if(M < b)
       {
-        DoWork(M, b);
+        DoWork(M+1, b);
       }
     }
     int Split(int a, int b)
