@@ -14,11 +14,11 @@ namespace Exercize
           int[] Array = PrepareArray(ItemCount);
           sw.Start();
           // QuickSortOne QuickSorterOne = new QuickSortOne();
-          QuickSortTwo QuickSorterTwo = new QuickSortTwo();
-          // MergeSort MergeSorter = new MergeSort();
+          // QuickSortTwo QuickSorterTwo = new QuickSortTwo();
+          MergeSort MergeSorter = new MergeSort();
           // QuickSorterOne.Sort(Array);
-          QuickSorterTwo.Sort(Array);
-          // QuickSorterOne.Sort(Array);
+          // QuickSorterTwo.Sort(Array);
+          MergeSorter.Sort(Array);
           sw.Stop();
           if(IsSorted(Array))
           {
@@ -31,7 +31,6 @@ namespace Exercize
           }
           ItemCount *= 10;
         }
-        // tester.RunTest(6);
       }
       static int[] PrepareArray(int Size)
       {
@@ -39,7 +38,7 @@ namespace Exercize
         Random rnd = new Random();
         for(int j=0; j<Size; j++)
         {
-          Array[j] = rnd.Next(Size);
+          Array[j] = rnd.Next(Size * 10);
         }
         return Array;
       }
